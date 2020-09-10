@@ -129,14 +129,14 @@
 .sanddance-explorer-topbar .logo {
   color: #0078d4;
   display: grid;
-  grid-template-columns: 50px auto;
+  grid-template-columns: 150px auto;
   padding: 6px 0; }
 
 .sanddance-explorer-topbar .logo svg {
   fill: #0078d4;
   height: 24px;
   margin: 0 auto;
-  width: 24px; }
+  width: 120px; }
 
 .sanddance-explorer-topbar .logo a {
   color: inherit;
@@ -215,7 +215,8 @@
 .sanddance-sidebar .sidebar-content {
   background-color: inherit;
   display: grid;
-  grid-template-areas: "stats stats" "tabs bar";
+  grid-template-areas: "stats stats"
+ "tabs bar";
   grid-template-columns: 50px auto;
   grid-template-rows: 0fr auto;
   height: 100%;
