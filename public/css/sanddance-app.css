@@ -87,10 +87,10 @@
 .sanddance-tooltip td {
   text-align: left;
   vertical-align: top;
-  width: 75%; }
+  width: 60%; }
 
 .sanddance-tooltip td:first-child {
-  width: 25%; }
+  width: 40%; }
 
 .sanddance-scheme.disabled {
   filter: grayscale(95%); }
@@ -128,15 +128,12 @@
 
 .sanddance-explorer-topbar .logo {
   color: #0078d4;
-  display: grid;
-  grid-template-columns: 150px auto;
   padding: 6px 0; }
 
 .sanddance-explorer-topbar .logo svg {
   fill: #0078d4;
-  height: 24px;
   margin: 0 auto;
-  width: 120px; }
+  width: 216px; }
 
 .sanddance-explorer-topbar .logo a {
   color: inherit;

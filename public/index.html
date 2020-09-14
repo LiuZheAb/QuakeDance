@@ -13,11 +13,14 @@
 
 <body>
     <!-- link to JSON files so we can get a url from the bundler -->
+    <a class="sanddance-app-static-content" id="cnQuakeInfo" data-display-name="中国地震信息" data-type="csv"
+        href="./sample-data/中国地震信息.csv"></a>
+    <a class="sanddance-app-static-content" id="deathNum" data-display-name="1900年以来全球死亡千人以上地震" data-type="csv"
+        href="./sample-data/1900年以来全球死亡千人以上地震.csv"></a>
     <a class="sanddance-app-static-content" id="demovote" data-display-name="Demo Vote" data-type="tsv"
         href="./sample-data/demovote.tsv"></a>
     <a class="sanddance-app-static-content" id="titanic" data-display-name="Titanic" data-type="tsv"
         href="./sample-data/titanicmaster.tsv"></a>
-
     <script>
         function setTheme(darkTheme) {
             localStorage.setItem('theme', darkTheme ? 'Dark' : 'Light');
@@ -53,6 +56,42 @@
                 "colorBin": "quantize",
                 "signalValues": {
                     "SandDanceColorBinCount": 2
+                }
+            },
+            "deathNum": {
+                "columns": {
+                    "uid": "no",
+                    "x": "经度",
+                    "y": "纬度",
+                    "color": "死亡人数",
+                    "sort": "震级",
+                    "size": "死亡人数",
+                },
+                "scheme": "yelloworangered",
+                "chart": "scatterplot",
+                "view": "2d",
+                "colorBin": "quantize",
+                "signalValues": {
+                    "SandDanceColorBinCount": 2,
+                    "RoleColor_BinCountSignal": 10,
+                    "Chart_PointSizeSignal": 8,
+                }
+            },
+            "cnQuakeInfo": {
+                "columns": {
+                    "uid": "eventID",
+                    "x": "lon",
+                    "y": "lat",
+                    "color": "mag",
+                },
+                "scheme": "yelloworangered",
+                "chart": "scatterplot",
+                "view": "2d",
+                "colorBin": "quantize",
+                "signalValues": {
+                    "SandDanceColorBinCount": 2,
+                    "RoleColor_BinCountSignal": 7,
+                    "Chart_PointSizeSignal": 5,
                 }
             }
         };
@@ -92,6 +131,28 @@
                     }
                 },
                 "tooltipExclusions": ["Id", "Latitude", "Longitude"]
+            },
+            "deathNum": {
+                "chartPrefs": {
+                    "*": {
+                        "color": {
+                            "Winner": {
+                                "scheme": "dual_bluered",
+                            }
+                        }
+                    },
+                }
+            },
+            "cnQuakeInfo": {
+                "chartPrefs": {
+                    "*": {
+                        "color": {
+                            "Winner": {
+                                "scheme": "dual_bluered",
+                            }
+                        }
+                    },
+                }
             }
         };
     </script>
