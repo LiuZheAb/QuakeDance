@@ -128,11 +128,11 @@
 
 .sanddance-explorer-topbar .logo {
   color: #0078d4;
-  padding: 6px 0 6px 10px; }
+  padding: 6px 0;
+  text-align: center;}
 
 .sanddance-explorer-topbar .logo svg {
   fill: #0078d4;
-  margin: 0 auto;
   width: 216px; }
 
 .sanddance-explorer-topbar .logo a {
